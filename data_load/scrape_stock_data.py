@@ -2,8 +2,6 @@
 # pip install yahoo_fin
 # ref: http://theautomatic.net/yahoo_fin-documentation/
 
-# see if __name__ == "__main__": section on example usage
-
 from yahoo_fin.stock_info import get_data
 from sqlalchemy import create_engine
 from datetime import datetime as dt
