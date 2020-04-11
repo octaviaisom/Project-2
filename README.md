@@ -1,8 +1,9 @@
-# Project-2
+# Project-2     *Formatting looks off after commit*
 
 08:
 
 Application Name: 
+
 Amanda| agordongrad| Gordon
 Octavia| octaviaisom | Isom
 Sadia| SadiaS-96 | Sleweon
