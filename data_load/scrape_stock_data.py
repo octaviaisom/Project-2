@@ -73,6 +73,8 @@ if __name__ == "__main__":
                            start_date='01/01/2020', 
                            end_date = '04/01/2020', 
                            max_records = 100)
+
+    prices_df.to_csv('stock_data.csv',index=False)
     
     print(prices_df)
 
