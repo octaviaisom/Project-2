@@ -52,6 +52,7 @@ def build_stock_df(tickers, start_date, end_date, max_records):
         except:
             combined_results = results
 
+    combined_results['date'] = pd.to_datetime(combined_results['date'], yearfirst=True)
     return combined_results
 
 if __name__ == "__main__":
