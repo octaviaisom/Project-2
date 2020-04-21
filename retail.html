@@ -1,0 +1,382 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<link rel="icon" type="image/png" href="assets/img/favicon.ico">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+	<title>Retail Industry</title>
+
+	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <meta name="viewport" content="width=device-width" />
+
+
+    <!-- Bootstrap core CSS     -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Animation library for notifications   -->
+    <link href="assets/css/animate.min.css" rel="stylesheet"/>
+
+    <!--  Light Bootstrap Table core CSS    -->
+    <link href="assets/css/light-bootstrap-dashboard.css?v=1.4.0" rel="stylesheet"/>
+
+
+    <!--  CSS for Demo Purpose, don't include it in your project     -->
+    <link href="assets/css/demo.css" rel="stylesheet" />
+
+
+    <!--     Fonts and icons     -->
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
+    <link href="assets/css/pe-icon-7-stroke.css" rel="stylesheet" />
+
+</head>
+<body>
+
+<div class="wrapper">
+    <div class="sidebar" data-color="purple" data-image="assets/img/sidebar-5.jpg">
+
+ 
+    	<div class="sidebar-wrapper">
+            <div class="logo">
+                <a href="http://www.creative-tim.com" class="simple-text">
+                    Risky Viz-ness
+                </a>
+            </div>
+
+            <ul class="nav">
+                <li>
+                    <a href="home.html">
+                        <i class="pe-7s-home"></i>
+                        <p>Home</p>
+                    </a>
+                </li>
+
+                <li class="divider"></li>
+
+                <li>
+                    
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                              <p>
+                                  Delivery
+                                  <b class="caret"></b>
+                              </p>
+
+                        </a>
+                        <ul class="dropdown-menu">
+                          <li><a href="#">FedEx</a></li>
+                          <li><a href="#">UPS</a></li>
+                          <li><a href="#">DHL</a></li>
+
+                        </ul>
+                  
+                </li>
+                <li class="active">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <p>
+                            Medical
+                            <b class="caret"></b>
+                        </p>
+
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">Amazon</a></li>
+                    <li><a href="#">Wal-Mart</a></li>
+                    <li><a href="#">CVS</a></li>
+                  </ul>
+
+
+                </li>
+                <li class="active">    
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <p>
+                            Retail
+                            <b class="caret"></b>
+                        </p>
+
+                  </a>
+                  <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+
+                    <li role="presentation" class="bg-primary text-white"><a role="menuitem" tabindex="-1" href="#">Amazon</a></li>
+                
+                    <li role="presentation" class="bg-primary text-white"><a role="menuitem" tabindex="-1" href="#">Walmart</a></li>
+                
+                    <li role="presentation" class="bg-primary text-white"><a role="menuitem" tabindex="-1" href="#">CVS</a></li>
+                
+                  </ul>
+
+                </div>
+                </li>
+                <li>
+
+                    
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <p>
+                            Medical Services
+                            <b class="caret"></b>
+                        </p>
+
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">Community Health Systems</a></li>
+                    <li><a href="#">Teladoc Health</a></li>
+                    <li><a href="#">MEDD Medical Imaging Corp</a></li>
+
+                  </ul>
+
+                </li>  
+
+            </ul>
+    	</div>
+    </div>
+
+    <div class="main-panel">
+        
+
+
+        <div class="content">
+            <div class="container-fluid">
+                <div class="row">
+                    
+
+                    <div class="col-md-8">
+                        <div class="card">
+                            <div class="header">
+                                <h4 class="title">Users Behavior</h4>
+                                <p class="category">24 Hours performance</p>
+                            </div>
+                            <div class="content">
+                                <div id="chartHours" class="ct-chart"></div>
+                                <div class="footer">
+                                    <div class="legend">
+                                        <i class="fa fa-circle text-info"></i> Open
+                                        <i class="fa fa-circle text-danger"></i> Click
+                                        <i class="fa fa-circle text-warning"></i> Click Second Time
+                                    </div>
+                                    <hr>
+                                    <div class="stats">
+                                        <i class="fa fa-history"></i> Updated 3 minutes ago
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-md-4">
+                        <div class="card ">
+                            <div class="header">
+                                <h4 class="title">Latest COVID-19 Updates</h4>
+                                <p class="category">Backend development</p>
+                            </div>
+                            <div class="content">
+                                <div class="table-full-width">
+                                    <table class="table">
+                                        <tbody>
+                                            <tr>
+                                                <td>
+													<div class="checkbox">
+						  							  	<input id="checkbox1" type="checkbox">
+						  							  	<label for="checkbox1"></label>
+					  						  		</div>
+                                                </td>
+                                                <td>Sign contract for "What are conference organizers afraid of?"</td>
+                                                <td class="td-actions text-right">
+                                                    <button type="button" rel="tooltip" title="Edit Task" class="btn btn-info btn-simple btn-xs">
+                                                        <i class="fa fa-edit"></i>
+                                                    </button>
+                                                    <button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-simple btn-xs">
+                                                        <i class="fa fa-times"></i>
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+													<div class="checkbox">
+						  							  	<input id="checkbox2" type="checkbox" checked>
+						  							  	<label for="checkbox2"></label>
+					  						  		</div>
+                                                </td>
+                                                <td>Lines From Great Russian Literature? Or E-mails From My Boss?</td>
+                                                <td class="td-actions text-right">
+                                                    <button type="button" rel="tooltip" title="Edit Task" class="btn btn-info btn-simple btn-xs">
+                                                        <i class="fa fa-edit"></i>
+                                                    </button>
+                                                    <button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-simple btn-xs">
+                                                        <i class="fa fa-times"></i>
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+													<div class="checkbox">
+						  							  	<input id="checkbox3" type="checkbox">
+						  							  	<label for="checkbox3"></label>
+					  						  		</div>
+                                                </td>
+                                                <td>Flooded: One year later, assessing what was lost and what was found when a ravaging rain swept through metro Detroit
+												</td>
+                                                <td class="td-actions text-right">
+                                                    <button type="button" rel="tooltip" title="Edit Task" class="btn btn-info btn-simple btn-xs">
+                                                        <i class="fa fa-edit"></i>
+                                                    </button>
+                                                    <button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-simple btn-xs">
+                                                        <i class="fa fa-times"></i>
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+													<div class="checkbox">
+						  							  	<input id="checkbox4" type="checkbox" checked>
+						  							  	<label for="checkbox4"></label>
+					  						  		</div>
+                                                </td>
+                                                <td>Create 4 Invisible User Experiences you Never Knew About</td>
+                                                <td class="td-actions text-right">
+                                                    <button type="button" rel="tooltip" title="Edit Task" class="btn btn-info btn-simple btn-xs">
+                                                        <i class="fa fa-edit"></i>
+                                                    </button>
+                                                    <button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-simple btn-xs">
+                                                        <i class="fa fa-times"></i>
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+													<div class="checkbox">
+						  							  	<input id="checkbox5" type="checkbox">
+						  							  	<label for="checkbox5"></label>
+					  						  		</div>
+                                                </td>
+                                                <td>Read "Following makes Medium better"</td>
+                                                <td class="td-actions text-right">
+                                                    <button type="button" rel="tooltip" title="Edit Task" class="btn btn-info btn-simple btn-xs">
+                                                        <i class="fa fa-edit"></i>
+                                                    </button>
+                                                    <button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-simple btn-xs">
+                                                        <i class="fa fa-times"></i>
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+													<div class="checkbox">
+						  							  	<input id="checkbox6" type="checkbox" checked>
+						  							  	<label for="checkbox6"></label>
+					  						  		</div>
+                                                </td>
+                                                <td>Unfollow 5 enemies from twitter</td>
+                                                <td class="td-actions text-right">
+                                                    <button type="button" rel="tooltip" title="Edit Task" class="btn btn-info btn-simple btn-xs">
+                                                        <i class="fa fa-edit"></i>
+                                                    </button>
+                                                    <button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-simple btn-xs">
+                                                        <i class="fa fa-times"></i>
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                                <div class="footer">
+                                    <hr>
+                                    <div class="stats">
+                                        <i class="fa fa-history"></i> Updated 3 minutes ago
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="row">
+                <div class="col-md-8">
+                    
+                    <div class="col-md-4">
+                      
+                        <div class="card" style="width: 18rem;">
+                            <img src="https://img.maximummedia.ie/her_ie/eyJkYXRhIjoie1widXJsXCI6XCJodHRwOlxcXC9cXFwvbWVkaWEtaGVyLm1heGltdW1tZWRpYS5pZS5zMy5hbWF6b25hd3MuY29tXFxcL3dwLWNvbnRlbnRcXFwvdXBsb2Fkc1xcXC8yMDE1XFxcLzA4XFxcLzA2MTUzOTM0XFxcL2FtYXpvbi5qcGdcIixcIndpZHRoXCI6NzAwLFwiaGVpZ2h0XCI6MzcwLFwiZGVmYXVsdFwiOlwiaHR0cHM6XFxcL1xcXC93d3cuaGVyLmllXFxcL2Fzc2V0c1xcXC9pbWFnZXNcXFwvaGVyXFxcL25vLWltYWdlLnBuZz9pZD1kNDgyODZlN2RlZWNmYzIzZWVjNlwiLFwib3B0aW9uc1wiOltdfSIsImhhc2giOiI1YWU5M2I3MDA2MTc0OThhZDc2ODQxNDFiNjRjYWJmNGEyNDg0ZTViIn0=/amazon.jpg" class="card-img-top" alt="..." style="width: 18rem;"> 
+                            <div class="card-body">
+                              <h5 class="card-title">Amazon</h5>
+                              <p class="card-text"> An e-commerce multinational conglomerate tech company based in Seattle.</p>
+                              <a href="#" class="btn btn-primary">Dashboard</a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="col-md-4">
+                      
+                        <div class="card" style="width: 18rem;">
+                            <img src="http://cdn.images.fetchrewards.com/rewards/a55b2d3c8e00e20ef7f26773487c0355fae2c503.png?height=600&width=600" class="card-img-top" alt="..." style="width: 18rem;"> 
+                            <div class="card-body">
+                              <h5 class="card-title">Wal-Mart</h5>
+                              <p class="card-text"> An American multinational retail corporation that operates a chain of hypermarkets..</p>
+                              <a href="#" class="btn btn-primary">Dashboard</a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="col-md-4">
+                      
+                        <div class="card" style="width: 18rem;">
+                            <img src="data:image/png;base64,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" class="card-img-top" alt="..." style="width: 18rem;"> 
+                            <div class="card-body">
+                              <h5 class="card-title">CVS Pharmacy</h5>
+                              <p class="card-text"> American retail and health care company.</p>
+                              <a href="#" class="btn btn-primary">Dashboard</a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    
+
+                </div>    
+                </div>
+            </div>
+        </div>
+
+
+        <footer class="footer">
+            <div class="container-fluid">
+
+                <p class="copyright pull-right">
+                    &copy; <script>document.write(new Date().getFullYear())</script> <a href="http://www.creative-tim.com">Creative Tim</a>, made with love for a better web
+                </p>
+            </div>
+        </footer>
+
+    </div>
+</div>
+
+
+</body>
+
+    <!--   Core JS Files   -->
+    <script src="assets/js/jquery.3.2.1.min.js" type="text/javascript"></script>
+	<script src="assets/js/bootstrap.min.js" type="text/javascript"></script>
+
+	<!--  Charts Plugin -->
+	<script src="assets/js/chartist.min.js"></script>
+
+    <!--  Notifications Plugin    -->
+    <script src="assets/js/bootstrap-notify.js"></script>
+
+    <!--  Google Maps Plugin    -->
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
+
+    <!-- Light Bootstrap Table Core javascript and methods for Demo purpose -->
+	<script src="assets/js/light-bootstrap-dashboard.js?v=1.4.0"></script>
+
+	<!-- Light Bootstrap Table DEMO methods, don't include it in your project! -->
+	<script src="assets/js/demo.js"></script>
+
+
+
+</html>
