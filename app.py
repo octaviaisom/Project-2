@@ -8,13 +8,6 @@ from sqlalchemy import create_engine
 import datetime
 import pandas as pd
 
-'''sys.setrecursionlimit(2000)
-app = Flask(__name__)
-
-
-client = pymongo.MongoClient()
-db = client.mars_db
-collection = db.mars_facts'''
 app = Flask(__name__)
 app._static_folder = 'static/'
 

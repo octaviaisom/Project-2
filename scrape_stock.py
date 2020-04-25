@@ -7,7 +7,7 @@ from sqlalchemy import create_engine
 import datetime
 import pandas as pd
 
-def get_stock_data():
+def get_stock_data(start_date = '01/22/2020'):
 
     """
     This function loops through the tickers, runs get_stock_data and 
@@ -19,7 +19,6 @@ def get_stock_data():
     max_records: integer with the max number of results er stock
     """
     #Covid data starts on 1/22/20
-    start_date = '01/22/2020'
     today = datetime.datetime.now()
     one_day = datetime.timedelta(days = 1)
     end_date = (today-one_day).strftime('%m-%d-%Y')
