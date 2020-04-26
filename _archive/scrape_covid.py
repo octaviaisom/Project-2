@@ -3,10 +3,16 @@ import pandas as pd
 import datetime
 import scrape_stock
 
+tickers = pd.DataFrame({
+    'Sector' : ['Delivery', 'Delivery', 'Delivery', 'Medical Goods', 'Medical Goods', 'Medical Goods', 'Medical Services', 'Medical Services', 'Medical Services', 'Retail', 'Retail', 'Retail', 'Market', 'Market', 'Market'],
+    'Name' : ['FedEx', 'UPS', 'DHL', 'Johnson & Johnson', 'Cardinal Health', '3M', 'Medical Imaging Corp', 'Community Health Systems', 'Teladoc Health', 'Walmart', 'Amazon', 'CVS', 'Dow Jones', 'S & P 500', 'Nasdaq'],
+    'Ticker' : ['FDX', 'UPS', 'DPSGY', 'JNJ', 'CAH', 'MMM', 'MEDD', 'CYH', 'TDOC', 'WMT', 'AMZN', 'CVS', '^DJI', '^GSPC', '^IXIC'],
+})
+
 def get_covid_data():
 
 
-    stock_return = scrape_stock.get_stock_data()
+    stock_return = scrape_stock.get_stock_data(tickers=tickers, start_date='01/22/2020', end_date='4/24/2020')
     stock_dates = stock_return[1] 
         
     url  = 'https://pomber.github.io/covid19/timeseries.json'
