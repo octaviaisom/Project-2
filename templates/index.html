@@ -21,9 +21,6 @@
     <!--  Light Bootstrap Table core CSS    -->
     <link href="{{ url_for('static', filename='css/light-bootstrap-dashboard.css') }}" rel="stylesheet"/>
 
-
-
-
     <!--     Fonts and icons     -->
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
@@ -74,7 +71,7 @@
 
                     <a href="med_supply.html">
                         <i class="pe-7s-bandaid"></i>
-                            Medical
+                            Medical Supply
                             
 
 
@@ -86,6 +83,21 @@
                     <a href="med_services.html">
                         <i class="pe-7s-id"></i>
                             Medical Services
+                            
+
+
+                  </a>
+
+                </li>
+
+                <hr>
+
+                <li>
+
+
+                    <a href="https://github.com/octaviaisom/project-2-html" target="_blank">
+                        <i class="fab fa-github"></i>
+                            GitHub Repo
                             
 
 
@@ -109,7 +121,7 @@
 
                             <div class="card">
                                 <div class="header">
-                                    <h4 class="title">Overall Stock Market Performance vs. COVID</h4>
+                                    <h4 class="title">Stock Performance vs. COVID</h4>
                                     <p class='category'>For zoom, move mouse wheel(desktop) or pinch(mobile) over chart area.</p>
                                 </div>
                                 <div class="content">
@@ -237,18 +249,13 @@
     <!--  Notifications Plugin    -->
     <script src="{{ url_for('static', filename='js/bootstrap-notify.js') }}"></script>
 
-
-
     <!-- Light Bootstrap Table Core javascript and methods for Demo purpose -->
 	<script src="{{ url_for('static', filename='js/light-bootstrap-dashboard.js') }}"></script>
 	<script src="https://d3js.org/d3.v5.min.js"></script>
 	<script src="{{ url_for('static', filename='billboard.min.js') }}"></script>
 
-
-
-
-
-	<link rel="stylesheet" href="{{ url_for('static', filename='billboard.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='billboard.min.css') }}">
+    
 	<script>
 	var covid_data = {{ covid_data | safe }};
 	var cases = covid_data[0];

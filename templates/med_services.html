@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     
 
-	<title>Project 2</title>
+	<title>Medical Services</title>
 
 	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
     <meta name="viewport" content="width=device-width" />
@@ -20,9 +20,6 @@
 
     <!--  Light Bootstrap Table core CSS    -->
     <link href="{{ url_for('static', filename='css/light-bootstrap-dashboard.css') }}" rel="stylesheet"/>
-
-
-
 
     <!--     Fonts and icons     -->
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
@@ -44,7 +41,7 @@
 
             <ul class="nav">
 
-                <li class="active">
+                <li>
                     <a href="index.html">
                         <i class="pe-7s-home"></i>
                         <p>Home</p>
@@ -74,7 +71,7 @@
 
                     <a href="med_supply.html">
                         <i class="pe-7s-bandaid"></i>
-                            Medical
+                            Medical Supply
                             
 
 
@@ -83,9 +80,24 @@
                 <li>
 
 
-                    <a href="med_services.html">
+                    <a href="med_services.html" class="active">
                         <i class="pe-7s-id"></i>
                             Medical Services
+                            
+
+
+                  </a>
+
+                </li>
+
+                <hr>
+
+                <li>
+
+
+                    <a href="https://github.com/octaviaisom/project-2-html" target="_blank">
+                        <i class="fab fa-github"></i>
+                            GitHub Repo
                             
 
 
@@ -109,7 +121,7 @@
 
                             <div class="card">
                                 <div class="header">
-                                    <h4 class="title">Overall Stock Market Performance vs. COVID</h4>
+                                    <h4 class="title">Stock Performance vs. COVID</h4>
                                     <p class='category'>For zoom, move mouse wheel(desktop) or pinch(mobile) over chart area.</p>
                                 </div>
                                 <div class="content">
@@ -125,43 +137,32 @@
                         <div class="card col-md-12">
                             <div class="content">
                                 
-                                <div class="col-md-3 col-sm-6">
-                                    <div class="card" style="width: 15rem;">
-                                        <img src="{{ url_for('static', filename='img/delivery.jpg') }}" class="card-img-top" alt="..." style="width: 15rem;">
+                                <div class="col-md-4 col-sm-6">
+                                    <div class="card" style="width: 18rem;">
+                                        <img src="{{ url_for('static', filename='img/chs.jpg') }}" class="card-img-top" alt="..." style="width: 18rem;">
                                         <div class="card-body ">
-                                            <a href="delivery.html" class="btn btn-primary" style="width: 15rem;">Delivery Industry</a>
+                                            <a href="https://www.chs.net/" class="btn btn-primary" style="width: 18rem;" target="_blank">Community Health Systems</a>
                                         </div>
                                     </div> 
                                 </div> 
 
-                                <div class="col-md-3 col-sm-6">
-                                    <div class="card" style="width: 15rem;">
-                                        <img src="{{ url_for('static', filename='img/retail.jpg') }}" class="card-img-top" alt="..." style="width: 15rem;">
+                                <div class="col-md-4 col-sm-6">
+                                    <div class="card" style="width: 18rem;">
+                                        <img src="{{ url_for('static', filename='img/medd.jpg') }}" class="card-img-top" alt="..." style="width: 18rem;">
                                         <div class="card-body ">
-                                            <a href="retail.html" class="btn btn-primary" style="width: 15rem;">Retail Industry</a>
+                                            <a href="http://www.medimagingcorp.com/" class="btn btn-primary" style="width: 18rem;" target="_blank">Medical Imaging Corp.</a>
                                         </div>
                                     </div> 
                                 </div> 
 
-                                <div class="col-md-3 col-sm-6">
-                                    <div class="card" style="width: 15rem;">
-                                        <img src="{{ url_for('static', filename='img/medsupply.jpg') }}" class="card-img-top" alt="..." style="width: 15rem;">
+                                <div class="col-md-4 col-sm-6">
+                                    <div class="card" style="width: 18rem;">
+                                        <img src="{{ url_for('static', filename='img/teladoc.jpg') }}" class="card-img-top" alt="..." style="width: 18rem;">
                                         <div class="card-body ">
-                                            <a href="med_supply.html" class="btn btn-primary" style="width: 15rem;">Medical Supply</a>
+                                            <a href="https://www.teladoc.com/" class="btn btn-primary" style="width: 18rem;" target="_blank">Teladoc</a>
                                         </div>
                                     </div> 
                                 </div> 
-
-                                <div class="col-md-3 col-sm-6">
-                                    <div class="card" style="width: 15rem;">
-                                        <img src="{{ url_for('static', filename='img/medservices.jpg') }}" class="card-img-top" alt="..." style="width: 15rem;">
-                                        <div class="card-body ">
-                                            <a href="med_services.html" class="btn btn-primary" style="width: 15rem;">Medical Services</a>
-                                        </div>
-                                    </div> 
-                                </div> 
-
- 
 
                             </div>
                         </div>
@@ -238,17 +239,13 @@
     <script src="{{ url_for('static', filename='js/bootstrap-notify.js') }}"></script>
 
 
-
     <!-- Light Bootstrap Table Core javascript and methods for Demo purpose -->
 	<script src="{{ url_for('static', filename='js/light-bootstrap-dashboard.js') }}"></script>
 	<script src="https://d3js.org/d3.v5.min.js"></script>
 	<script src="{{ url_for('static', filename='billboard.min.js') }}"></script>
 
-
-
-
-
-	<link rel="stylesheet" href="{{ url_for('static', filename='billboard.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='billboard.min.css') }}">
+    
 	<script>
 	var covid_data = {{ covid_data | safe }};
 	var cases = covid_data[0];
@@ -305,23 +302,6 @@
 
 	});
 
-	</script>
-
-	<script type="text/javascript">
-    	$(document).ready(function(){
-
-        	// demo.initChartist();
-
-        	$.notify({
-            	icon: 'pe-7s-flag',
-            	message: "<b>Welcome to Risky Viz-ness' Project 2</b> - Use this dashboard to compare COVID-19 cases against stock data from the Delivery, Retail, Medical Goods, and Medical Services industries."
-
-            },{
-                type: 'info',
-                timer: 10000
-            });
-
-    	});
 	</script>
 
 </html>
