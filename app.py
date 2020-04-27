@@ -18,8 +18,60 @@ tickers = pd.DataFrame({
 def index():
 
     stock_data, covid_data = get_data.main()
+    
+    topic = 'covid-19'
+    article_count = 5
+    articles = get_data.get_articles(topic, article_count)
 
-    return render_template('index.html', covid_data = covid_data, stock_data = stock_data)
+    return render_template('index.html', covid_data = covid_data, stock_data = stock_data, articles = articles)
+
+@app.route("/delivery")
+def delivery():
+
+    stock_data, covid_data = get_data.main()
+    
+    topic = 'covid-19 delivery industry'
+    article_count = 5
+    articles = get_data.get_articles(topic, article_count)
+
+    return render_template('index.html', covid_data = covid_data, stock_data = stock_data, articles = articles)
+
+
+@app.route("/retail")
+def retail():
+
+    stock_data, covid_data = get_data.main()
+    
+    topic = 'covid-19 retail industry'
+    article_count = 5
+    articles = get_data.get_articles(topic, article_count)
+
+    return render_template('index.html', covid_data = covid_data, stock_data = stock_data, articles = articles)
+
+
+@app.route("/med_supply")
+def med_supply():
+
+    stock_data, covid_data = get_data.main()
+    
+    topic = 'covid-19 medical supply'
+    article_count = 5
+    articles = get_data.get_articles(topic, article_count)
+
+    return render_template('index.html', covid_data = covid_data, stock_data = stock_data, articles = articles)
+
+
+ @app.route("/med_services")
+def med_services():
+
+    stock_data, covid_data = get_data.main()
+    
+    topic = 'covid-19 medical services'
+    article_count = 5
+    articles = get_data.get_articles(topic, article_count)
+
+    return render_template('index.html', covid_data = covid_data, stock_data = stock_data, articles = articles)
+
 
 if __name__ == "__main__":
     app.run(debug=True)

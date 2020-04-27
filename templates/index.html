@@ -1,9 +1,10 @@
 <!doctype html>
 <html lang="en">
 <head>
-	<meta charset="utf-8" />
-	<link rel="icon" type="image/png" href="img/favicon.ico">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta charset="utf-8" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    
 
 	<title>Project 2</title>
 
@@ -44,75 +45,51 @@
             <ul class="nav">
 
                 <li class="active">
-                    <a href="home.html">
+                    <a href="index.html">
                         <i class="pe-7s-home"></i>
                         <p>Home</p>
                     </a>
                 </li>
 
                 <li>
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                    <a href="delivery.html">
                             <i class="pe-7s-box2"></i>
                             Delivery
-                            <b class="caret"></b>
+                            
                     </a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">FedEx</a></li>
-                            <li><a href="#">UPS</a></li>
-                            <li><a href="#">DHL</a></li>
-
-                        </ul>
                 <li>
                 <li>
 
-                    <a href="" class="dropdown-toggle" data-toggle="dropdown">
+                    <a href="Retail.html">
                         <i class="pe-7s-shopbag"></i>
                             Retail
-                            <b class="caret"></b>
+                            
 
 
                   </a>
-                  <ul class="dropdown-menu">
-                    <li><a href="#">Amazon</a></li>
-                    <li><a href="#">Wal-Mart</a></li>
-                    <li><a href="#">CVS</a></li>
-                  </ul>
 
 
                 </li>
                 <li>
 
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                    <a href="med_supply.html">
                         <i class="pe-7s-bandaid"></i>
                             Medical
-                            <b class="caret"></b>
+                            
 
 
                   </a>
-                  <ul class="dropdown-menu">
-                    <li><a href="#">Cardinal Health</a></li>
-                    <li><a href="#">Johnson & Johnson</a></li>
-                    <li><a href="#">3M</a></li>
-                  </ul>
-
-
                 </li>
                 <li>
 
 
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                    <a href="med_services.html">
                         <i class="pe-7s-id"></i>
                             Medical Services
-                            <b class="caret"></b>
+                            
 
 
                   </a>
-                  <ul class="dropdown-menu">
-                    <li><a href="#">Community Health Systems</a></li>
-                    <li><a href="#">Teladoc Health</a></li>
-                    <li><a href="#">MEDD Medical Imaging Corp</a></li>
-
-                  </ul>
 
                 </li>
 
@@ -121,101 +98,130 @@
     </div>
 
     <div class="main-panel">
-
-
-
         <div class="content">
             <div class="container-fluid">
                 <div class="row">
 
 
                     <div class="col-md-8">
-                        <div class="card">
-                            <div class="header">
-                                <h4 class="title">Overall Stock Market Performance vs. COVID</h4>
-                                <h6>For zoom, move mouse wheel(desktop) or pinch(mobile) over chart area.</h6>
-                                <h6>When is zoomed, navigate with dragging it.</h6>
 
+                        <div class="row">
+
+                            <div class="card">
+                                <div class="header">
+                                    <h4 class="title">Overall Stock Market Performance vs. COVID</h4>
+                                    <p class='category'>For zoom, move mouse wheel(desktop) or pinch(mobile) over chart area.</p>
+                                </div>
+                                <div class="content">
+                                    <div id="chartHours"></div>
+
+
+                                </div>
                             </div>
+
+                        </div>
+
+                        <div class="row">
+                        <div class="card col-md-12">
                             <div class="content">
-                                <div id="chartHours" class="ct-chart"></div>
+                                
+                                <div class="col-md-3 col-sm-6">
+                                    <div class="card" style="width: 15rem;">
+                                        <img src="{{ url_for('static', filename='img/delivery.jpg') }}" class="card-img-top" alt="..." style="width: 15rem;">
+                                        <div class="card-body ">
+                                            <a href="delivery.html" class="btn btn-primary" style="width: 15rem;">Delivery Industry</a>
+                                        </div>
+                                    </div> 
+                                </div> 
+
+                                <div class="col-md-3 col-sm-6">
+                                    <div class="card" style="width: 15rem;">
+                                        <img src="{{ url_for('static', filename='img/retail.jpg') }}" class="card-img-top" alt="..." style="width: 15rem;">
+                                        <div class="card-body ">
+                                            <a href="retail.html" class="btn btn-primary" style="width: 15rem;">Retail Industry</a>
+                                        </div>
+                                    </div> 
+                                </div> 
+
+                                <div class="col-md-3 col-sm-6">
+                                    <div class="card" style="width: 15rem;">
+                                        <img src="{{ url_for('static', filename='img/medsupply.jpg') }}" class="card-img-top" alt="..." style="width: 15rem;">
+                                        <div class="card-body ">
+                                            <a href="med_supply.html" class="btn btn-primary" style="width: 15rem;">Medical Supply</a>
+                                        </div>
+                                    </div> 
+                                </div> 
+
+                                <div class="col-md-3 col-sm-6">
+                                    <div class="card" style="width: 15rem;">
+                                        <img src="{{ url_for('static', filename='img/medservices.jpg') }}" class="card-img-top" alt="..." style="width: 15rem;">
+                                        <div class="card-body ">
+                                            <a href="med_services.html" class="btn btn-primary" style="width: 15rem;">Medical Services</a>
+                                        </div>
+                                    </div> 
+                                </div> 
 
  
+
                             </div>
                         </div>
-
-
-                        <div class="col-md-3">
-
-                            <div class="card" style="width: 18rem;">
-                                <img src="https://freedesignfile.com/upload/2018/10/Smiling-young-delivery-guy-Stock-Photo-04.jpg" class="card-img-top" alt="..." style="width: 18rem;">
-                                <div class="card-body">
-                                  <h5 class="card-title">Delivery</h5>
-                                  <p class="card-text">Short blurb about DELIVERY industry's overall performance, trend in dashboard.</p>
-                                  <a href="#" class="btn btn-primary">Learn More</a>
-                                </div>
-                            </div>
-
                         </div>
-
-                        <div class="col-md-3">
-
-                            <div class="card" style="width: 18rem;">
-                                <img src="https://media.sciencephoto.com/image/f0054045/800wm" class="card-img-top" alt="..." style="width: 18rem;">
-                                <div class="card-body">
-                                  <h5 class="card-title">Retail</h5>
-                                  <p class="card-text">Short blurb about RETAIL industry's overall performance, trend in dashboard.</p>
-                                  <a href="retail.html" class="btn btn-primary">Learn More</a>
-                                </div>
-                            </div>
-
-                        </div>
-
-                        <div class="col-md-3">
-
-                            <div class="card" style="width: 18rem;">
-                                <img src="https://www.mdsupplies.com/sup/images/medical-supply-store.jpg" class="card-img-top" alt="..." style="width: 18rem;">
-                                <div class="card-body">
-                                  <h5 class="card-title">Medical</h5>
-                                  <p class="card-text">Short blurb about MEDICAL industry's overall performance, trend in dashboard.</p>
-                                  <a href="#" class="btn btn-primary">Learn More</a>
-                                </div>
-                            </div>
-
-                        </div>
-
-                        <div class="col-md-3">
-
-                            <div class="card" style="width: 18rem;">
-                                <img src="https://hhp-blog.s3.amazonaws.com/2017/08/iStock-812760206.jpg" class="card-img-top" alt="..." style="width: 18rem;">
-                                <div class="card-body">
-                                  <h5 class="card-title">Medical Services</h5>
-                                  <p class="card-text">Short blurb about MEDICAL SERVICES industry's overall performance, trend in dashboard.</p>
-                                  <a href="#" class="btn btn-primary">Learn More</a>
-                                </div>
-                            </div>
-
-                        </div>
-
-
-
+                                                
                     </div>
+
+
+
                     <div class="col-md-4">
+
+
+                        <div class="card">
+
+                            <div class="header">
+
+                                <h4 class="title">Recent News Updates</h4>
+                                
+                                <hr>
+
+                                <ul class="list-unstyled">
+                                    {% for i in articles %}
+
+                                        <li class="media">
+                                            <div class="media-body">
+                                            <img src="{{ i.image }}" align='right' width="75" height="75" style="margin:0px 3px" alt="...">
+                                            <a href="{{ i.link }}" target="_blank">{{ i.title }}</a>
+                                            <p class = "category">Source: {{ i.source }}</p>
+                                            <div class="stats"><i class="fa fa-clock-o"></i>Posted: {{ i.post_date }}</div>
+                                            </div>
+                                        </li>
+
+                                        <hr>
+                                    {% endfor %}
+
+                                   
+                                                        
+                                </ul>
                         
+                            </div>
+
+                        </div>
+                        
+
                     </div>
-                </div>
-
-                <div class="row">
 
                 </div>
-
-
             </div>
         </div>
-
-
-
     </div>
+
+    <footer class="footer">
+        <div class="container-fluid">
+
+            <p class="copyright pull-right">
+                &copy; <script>document.write(new Date().getFullYear())</script> <a href="http://www.creative-tim.com">Creative Tim</a>, made with love for a better web
+            </p>
+        </div>
+    </footer>
+
 </div>
 
 
@@ -270,7 +276,7 @@
 
 	      colors: {
 	        FDX: "red",
-	        "No. of New Cases": "green"
+	        "No. of New Cases": "blue"
 	      },
 
 	      axes: {
@@ -308,11 +314,11 @@
 
         	$.notify({
             	icon: 'pe-7s-flag',
-            	message: "<b>Welcome to Risky Viz-ness' project 2</b> - Use this dashboard to review and compare stock data from the Delivery, Retail, Medical, and Medical Services industries that are performing well during COVID-19"
+            	message: "<b>Welcome to Risky Viz-ness' Project 2</b> - Use this dashboard to compare COVID-19 cases against stock data from the Delivery, Retail, Medical Goods, and Medical Services industries."
 
             },{
                 type: 'info',
-                timer: 4000
+                timer: 10000
             });
 
     	});

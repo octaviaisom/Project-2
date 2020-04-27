@@ -7,6 +7,7 @@ from yahoo_fin.stock_info import get_data
 import datetime
 import pandas as pd
 import requests
+from bs4 import BeautifulSoup
 
 import sqlalchemy
 from sqlalchemy.ext.automap import automap_base
@@ -213,3 +214,50 @@ def main():
     stock_data = get_stock_from_db(tickers)
     covid_data = get_covid_from_db()
     return([stock_data, covid_data])
+
+def get_articles(topic, article_count):
+
+    #Scrape article info
+    url = f'https://news.google.com/search?q={topic}&hl=en-US&gl=US&ceid=US%3Aen' #Create Google News url for topic
+
+    response = requests.get(url)
+    soup = BeautifulSoup(response.text, 'lxml')
+
+    articles = soup.find_all('article', class_='MQsxIb xTewfe R7GTQ keNKEd j7vNaf Cc0Z5d EjqUne')
+    images = soup.find_all('img', class_='tvs3Id QwxBBf')
+
+    
+    article_list = [] #Will store all articles
+
+    i = 0
+    while i < article_count:
+
+        print(f"Retrieving {topic} articles {i+1}")
+
+        try: 
+
+            title = articles[i].find('a', class_='DY5T1d').text
+            link = "https://news.google.com/" + articles[i].find('a', class_='DY5T1d')['href']
+            source = articles[i].find('a', class_='wEwyrc AVN2gc uQIVzc Sksgp').text
+            post_date = articles[i].find('time', class_='WW6dff uQIVzc Sksgp').text
+            image = images[i]['src']
+
+            article_info = {'title' : title,
+                           'link' : link,
+                           'source' : source,
+                           'post_date' : post_date,
+                           'image' : image}
+
+            article_list.append(article_info)
+
+            i +=1
+
+        except:
+            print(f'Unable to retrieve "{topic}" article {i}, skipping...')
+            i+=1
+
+
+    print(f"Successfully retrieved all articles") 
+    print("-------------------------------\n\n")
+    
+    return article_list
