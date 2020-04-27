@@ -34,7 +34,7 @@ def delivery():
     article_count = 5
     articles = get_data.get_articles(topic, article_count)
 
-    return render_template('index.html', covid_data = covid_data, stock_data = stock_data, articles = articles)
+    return render_template('delivery.html', covid_data = covid_data, stock_data = stock_data, articles = articles)
 
 
 @app.route("/retail")
@@ -46,7 +46,7 @@ def retail():
     article_count = 5
     articles = get_data.get_articles(topic, article_count)
 
-    return render_template('index.html', covid_data = covid_data, stock_data = stock_data, articles = articles)
+    return render_template('retail.html', covid_data = covid_data, stock_data = stock_data, articles = articles)
 
 
 @app.route("/med_supply")
@@ -58,7 +58,7 @@ def med_supply():
     article_count = 5
     articles = get_data.get_articles(topic, article_count)
 
-    return render_template('index.html', covid_data = covid_data, stock_data = stock_data, articles = articles)
+    return render_template('med_supply.html', covid_data = covid_data, stock_data = stock_data, articles = articles)
 
 
 @app.route("/med_services")
@@ -70,7 +70,7 @@ def med_services():
     article_count = 5
     articles = get_data.get_articles(topic, article_count)
 
-    return render_template('index.html', covid_data = covid_data, stock_data = stock_data, articles = articles)
+    return render_template('med_services.html', covid_data = covid_data, stock_data = stock_data, articles = articles)
 
 
 if __name__ == "__main__":
