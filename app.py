@@ -61,7 +61,7 @@ def med_supply():
     return render_template('index.html', covid_data = covid_data, stock_data = stock_data, articles = articles)
 
 
- @app.route("/med_services")
+@app.route("/med_services")
 def med_services():
 
     stock_data, covid_data = get_data.main()
