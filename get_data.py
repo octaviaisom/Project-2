@@ -65,9 +65,8 @@ def load_stock_data(tickers):
     #end_date = '03-31-2020'
     
     # connect to the database
-    # connection_string = "postgres:postgres@localhost:5432/Project-2_db"
-    # engine = create_engine(f'postgresql://{connection_string}')
-    engine = create_engine("sqlite:///project2.sqlite")
+    connection_string = "postgres:postgres@localhost:5432/Project-2_db"
+    engine = create_engine(f'postgresql://{connection_string}')
     
     # if the table exists set the start date to one day past the last date in the db
     if engine.has_table('stocks'):
@@ -150,9 +149,8 @@ def load_covid_data():
     """
     
     # connect to the database
-    # connection_string = "postgres:postgres@localhost:5432/Project-2_db"
-    # engine = create_engine(f'postgresql://{connection_string}')
-    engine = create_engine("sqlite:///project2.sqlite")
+    connection_string = "postgres:postgres@localhost:5432/Project-2_db"
+    engine = create_engine(f'postgresql://{connection_string}')
     
     try:
         stock_dates = set([date[0] for date in engine.execute('SELECT date FROM stocks;')])
@@ -173,9 +171,8 @@ def load_covid_data():
     covid_df.to_sql(name='covid', con=engine, if_exists='append')
 
 def get_stock_from_db(tickers):
-    # connection_string = "postgres:postgres@localhost:5432/Project-2_db"
-    # engine = create_engine(f'postgresql://{connection_string}')
-    engine = create_engine("sqlite:///project2.sqlite")
+    connection_string = "postgres:postgres@localhost:5432/Project-2_db"
+    engine = create_engine(f'postgresql://{connection_string}')
     
     # get the results from the datframe
     stock_df = pd.read_sql(sql='stocks', con=engine)
@@ -202,9 +199,8 @@ def get_stock_from_db(tickers):
     return(stock_dict)
 
 def get_covid_from_db():
-    # connection_string = "postgres:postgres@localhost:5432/Project-2_db"
-    # engine = create_engine(f'postgresql://{connection_string}')
-    engine = create_engine("sqlite:///project2.sqlite")
+    connection_string = "postgres:postgres@localhost:5432/Project-2_db"
+    engine = create_engine(f'postgresql://{connection_string}')
     covid_df = pd.read_sql(sql='covid', con=engine).sort_values('date')
     
     covid_confirmed_list = covid_df['delta'].tolist()
