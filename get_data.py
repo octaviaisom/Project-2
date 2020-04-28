@@ -176,7 +176,6 @@ def get_stock_from_db(tickers):
     
     # get the results from the datframe
     stock_df = pd.read_sql(sql='stocks', con=engine)
-#     covid_df = pd.read_sql(sql='covid', con=engine)
     
     # build the stock data
     stock_dict = {}
