@@ -121,7 +121,7 @@
 
                             <div class="card">
                                 <div class="header">
-                                    <h4 class="title">Stock Performance vs. COVID</h4>
+                                    <h4 class="title">Stock Markets' Performance vs. COVID</h4>
                                     <p class='category'>For zoom, move mouse wheel(desktop) or pinch(mobile) over chart area.</p>
                                 </div>
                                 <div class="content">
@@ -261,8 +261,15 @@
 	var cases = covid_data[0];
 
 	var stock_data = {{ stock_data | safe }};
-	var ticker = "FDX";
-	var ticker_data = stock_data[ticker]
+	var comps = ['^DJI', '^GSPC', '^IXIC'];
+    var comp1 = comps[0]
+    var comp2 = comps[1]
+    var comp3 = comps[2]
+
+	var comp1_data = stock_data[comp1]
+    var comp2_data = stock_data[comp2]
+    var comp3_data = stock_data[comp3]
+
 	var dates = stock_data['date']
 
 
@@ -272,22 +279,28 @@
 	      x: "date",
 	      columns: [
 	          dates,
-	          ticker_data,
+	          comp1_data, comp2_data, comp3_data,
 	          cases
 	      ],
 
 	      types: {
-	        FDX: "area-line-range",
+	        "^DJI": "area-line-range",
+            "^GSPC": "area-line-range",
+            "^IXIC": "area-line-range",
 	        "No. of New Cases": "area-spline"
 	      },
 
 	      colors: {
-	        FDX: "red",
+	        "^DJI": "red",
+            "^GSPC": "green",
+            "^IXIC": "orange",
 	        "No. of New Cases": "blue"
 	      },
 
 	      axes: {
-	        FDX: "y",
+	        "^DJI": "y",
+            "^GSPC": "y",
+            "^IXIC": "y",
 	        "No. of New Cases": "y2"
 	      }
 	  },
