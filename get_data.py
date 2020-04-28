@@ -36,6 +36,12 @@ def build_stock_df(tickers, start_date, end_date):
         results['company'] = tickers['Name'][record]
         results['sector'] = tickers['Sector'][record]
         
+        # multiply sub 1 cent stocks to be above 1 cent
+        price_cols = ['high', 'close', 'low', 'open', 'adjclose']
+        for price in price_cols:
+            if tickers['Ticker'][record] == 'MEDD':
+                results[price] = results[price] * 100
+
         #organize data for d3 use
         results['high'] = results.high.round(2)
         results['close'] = results.close.round(2)
