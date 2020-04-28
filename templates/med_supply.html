@@ -247,62 +247,74 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='billboard.min.css') }}">
     
 	<script>
-	var covid_data = {{ covid_data | safe }};
-	var cases = covid_data[0];
-
-	var stock_data = {{ stock_data | safe }};
-	var ticker = "FDX";
-	var ticker_data = stock_data[ticker]
-	var dates = stock_data['date']
-
-
-	var chart = bb.generate({
-	  bindto: "#chartHours",
-	  data: {
-	      x: "date",
-	      columns: [
-	          dates,
-	          ticker_data,
-	          cases
-	      ],
-
-	      types: {
-	        FDX: "area-line-range",
-	        "No. of New Cases": "area-spline"
-	      },
-
-	      colors: {
-	        FDX: "red",
-	        "No. of New Cases": "blue"
-	      },
-
-	      axes: {
-	        FDX: "y",
-	        "No. of New Cases": "y2"
-	      }
-	  },
-
-	  axis: {
-	    x: {
-	      type: "timeseries",
-	      tick: {
-	        count: 4,
-	        format: "%Y-%m-%d"
-	      }
-	    },
-
-	    y2: {
-	      show: true
-	    }
-	  },
-
-	  zoom: {
-	      enabled: true
-	  }
-
-	});
-
-	</script>
-
+        var covid_data = {{ covid_data | safe }};
+        var cases = covid_data[0];
+    
+        var stock_data = {{ stock_data | safe }};
+        var comps = ['JNJ', 'CAH', 'MMM'];
+        var comp1 = comps[0]
+        var comp2 = comps[1]
+        var comp3 = comps[2]
+    
+        var comp1_data = stock_data[comp1]
+        var comp2_data = stock_data[comp2]
+        var comp3_data = stock_data[comp3]
+    
+        var dates = stock_data['date']
+    
+    
+        var chart = bb.generate({
+          bindto: "#chartHours",
+          data: {
+              x: "date",
+              columns: [
+                  dates,
+                  comp1_data, comp2_data, comp3_data,
+                  cases
+              ],
+    
+              types: {
+                "JNJ": "area-line-range",
+                "CAH": "area-line-range",
+                "MMM": "area-line-range",
+                "No. of New Cases": "area-spline"
+              },
+    
+              colors: {
+                "JNJ": "red",
+                "CAH": "green",
+                "MMM": "orange",
+                "No. of New Cases": "blue"
+              },
+    
+              axes: {
+                "JNJ": "y",
+                "CAH": "y",
+                "MMM": "y",
+                "No. of New Cases": "y2"
+              }
+          },
+    
+          axis: {
+            x: {
+              type: "timeseries",
+              tick: {
+                count: 4,
+                format: "%Y-%m-%d"
+              }
+            },
+    
+            y2: {
+              show: true
+            }
+          },
+    
+          zoom: {
+              enabled: true
+          }
+    
+        });
+    
+    </script>
 
 </html>
